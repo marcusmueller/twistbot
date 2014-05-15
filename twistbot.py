@@ -71,7 +71,7 @@ class twistvote(irc.IRCClient):
         if msg.startswith("!vote"):
             items = msg.split(' ')
             if len(items) != 3:
-                self.msg(channel, "misformed vote. Syntax: \'!vote subject vote\', e.g. \'!vote meaning King of the Hamsters\'")
+                self.msg(channel, "misformed vote. Syntax: \'!vote subject vote\', e.g. \'!vote meaning King_of_the_Hamsters\'")
                 return
             subject = items[1].lower()[:100]
             vote = items[2].lower()[:100]
